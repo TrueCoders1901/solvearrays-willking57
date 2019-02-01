@@ -6,7 +6,10 @@ namespace SolveArrays
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            ArraySolver blah = new ArraySolver();
+            blah.AverageEvens(new int[]{-2, -5, -8});
+            Console.WriteLine("-2, -5, -8");
+            Console.WriteLine(blah.AverageEvens(new int[] { -2, -5, -8 }));
             Console.ReadLine();
         }
     }

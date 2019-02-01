@@ -5,28 +5,63 @@ namespace SolveArrays
 {
     public class ArraySolver
     {
-        public int Sum(int[] numbers)
+        public int Sum(int[] listofnumbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int total = 0;
+            foreach( var number in listofnumbers )
+            {
+                total = total + number;
+            }
+            return total;
+     
         }
 
-        public int SumEvens(int[] numbers)
+        public int SumEvens(int[] listofnumbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            int total = 0;
+            foreach( var number in listofnumbers )
+            {
+                if(number % 2 == 0)
+                {
+                    total = total + number;
+                }
+            }
+            return total;
         }
 
-        public double AverageEvens(int[] numbers)
+        public double AverageEvens(int[] listofnumbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            double total = 0;
+            double count = 0;
+            foreach( int number in listofnumbers )
+            {
+                if( number % 2 == 0 )
+                {
+                    total = total + number;
+                    count++;
+                }
+            }
+
+            if (count == 0)
+            { return 0; }
+
+            return total/count;
         }
 
-        public bool IsSumOdd(List<int> numbers)
+        public bool IsSumOdd(List<int> listofnumbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+
+            int total;
+            total = 0;
+
+            foreach( var number in listofnumbers )
+            {
+                
+                    total = total + number;
+                
+            }
+
+            return (total%2 == 1)||(total%2==-1);
         }
     }
 }
